@@ -1,3 +1,5 @@
+using MyFileManager;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -21,5 +23,23 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapGet("/Hello", () =>
+{
+    // minimal API
+    return new { msg = " hello world " };
+});
+
+app.MapGet("/Hello/{name}", (string name) =>
+{
+    // minimal API with path parameter
+    return new { msg = $" hello {name} " };
+});
+
+app.MapPost("/Hello", (MyData data) =>
+{
+    // minimal API with post request
+    return new { msg = $" my name is {data.Name}, I live in {data.Address} " };
+});
 
 app.Run();
