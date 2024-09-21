@@ -33,6 +33,8 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseStaticFiles();
+
 app.MapGet("/Hello", () =>
 {
     // minimal API
