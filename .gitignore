@@ -6,7 +6,8 @@
 *.user
 *.sln.docstates
 *.vsidx
-
+*.db-shm
+*.db-whl
 # Build results
 
 [Dd]ebug/
