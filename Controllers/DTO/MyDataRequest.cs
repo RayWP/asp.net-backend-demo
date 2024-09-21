@@ -1,6 +1,6 @@
-﻿namespace MyFileManager
+﻿namespace MyFileManager.Controllers.DTO
 {
-    public class MyData
+    public class MyDataRequest
     {
         public string Name { get; set; }
         public string Address { get; set; }
